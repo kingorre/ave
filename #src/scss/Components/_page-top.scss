@@ -1,0 +1,99 @@
+.page-top {
+  padding-top: 146px;
+
+  @include media-max($md) {
+    padding-top: 184px;
+  }
+
+  @include media-max($sm) {
+    padding-top: 120px;
+  }
+
+  &__body {
+    position: relative;
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 160px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include media-max($lg) {
+      padding: 120px 0;
+    }
+
+    @include media-max($md) {
+      padding: 100px 0;
+    }
+  
+    @include media-max($sm) {
+      padding: 70px 0;
+    }
+
+    @include media-max($xs) {
+      padding: 40px 0;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($greyDark, 0.75);
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 700;
+
+    span {
+      font-weight: 300;
+    }
+
+    @include media-max($lg) {
+      font-size: 42px;
+    }
+
+    @include media-max($md) {
+      font-size: 36px;
+    }
+  
+    @include media-max($sm) {
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    @include media-max($xs) {
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    font-size: 30px;
+    font-weight: 400;
+
+    @include media-max($md) {
+      font-size: 28px;
+    }
+  
+    @include media-max($sm) {
+    font-size: 22px;
+    }
+
+    @include media-max($xs) {
+    font-size: 18px;
+    }
+  }
+}

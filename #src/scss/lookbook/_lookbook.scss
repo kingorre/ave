@@ -1,0 +1,145 @@
+.lookbook {
+  padding-top: 60px;
+
+  @include media-max($sm) {
+    padding-top: 30px;
+  }
+
+  &__body {
+    padding: 50px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    @include media-max($md) {
+      padding: 40px 0;
+    }
+  
+    @include media-max($sm) {
+      padding: 20px 0;
+    }
+  }
+
+  &__filter {
+    margin-bottom: 50px;
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+
+    @include media-max($lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-max($xs) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: #f8f8f8;
+    transition: box-shadow 0.4s, background-color 0.4s;
+
+    &:hover {
+      box-shadow: 0 0 16px -2px rgba($mainText, 0.4);
+      background-color: #fff;
+    }
+
+    &--span2 {
+      grid-column: span 2;
+      background-image: url(../../img/lookbook-img-1.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right top;
+
+      @include media-max($lg) {
+        order: -1;
+        grid-column: span 3;
+      }
+
+      @include media-max($xs) {
+        grid-column: span 1;
+      }
+    }
+
+    &--span3 {
+      grid-column: span 3;
+      background-image: url(../../img/lookbook-img-2.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+
+      @include media-max($xs) {
+        grid-column: span 1;
+      }
+    }
+
+    &--content {
+      padding: 60px 15px 15px;
+
+      @include media-max($sm) {
+        padding-top: 15px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    span {
+      font-weight: 300;
+    }
+
+    @include media-max($sm) {
+      font-size: 42px;
+    }
+
+    @include media-max($xs) {
+      font-size: 32px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 320px;
+    margin-bottom: 30px;
+    font-size: 14px;
+
+    p:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+  }
+
+  &__code {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 14px;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  &__num {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+}

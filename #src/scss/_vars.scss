@@ -1,0 +1,21 @@
+$mainText: #727272;
+$darkText: #454647;
+$greyText: #575153;
+$accent: #00c8c8;
+
+$greyDark: #333;
+$bg: #f8f8f8;
+
+%bg-pseudo {
+  position: absolute;
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+$xl: 1440px;
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$xs: 480px;

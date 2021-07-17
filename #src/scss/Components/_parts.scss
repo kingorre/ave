@@ -1,0 +1,102 @@
+.logo {
+  position: relative;
+  width: 235px;
+  flex: 0 0 235px;
+
+  &__picture {
+    width: 235px;
+    height: 63px;
+    object-fit: contain;
+    object-position: center;
+
+    @include media-max($md) {
+      width: 53px;
+    }
+  }
+
+  @include media-max($md) {
+    flex: 0 0 53px;
+  }
+}
+
+.burger {
+  position: relative;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background-color: transparent;
+
+  span {
+    position: absolute;
+    top: calc(50% - 2px);
+    right: 0;
+    height: 4px;
+    width: 100%;
+    background-color: $accent;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px #000;
+    transition: width 0.4s;
+
+    &:first-child {
+      top: 5px;
+    }
+
+    &:last-child {
+      width: 70%;
+      top: auto;
+      bottom: 5px;
+    }
+  }
+
+  &._active {
+    span {
+      width: 70%;
+
+      &:last-child {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media-min(769px) {
+    display: none;
+  }
+}
+
+.btn-main {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #737373;
+  text-transform: uppercase;
+  color: $darkText;
+  font-weight: 600;
+  background-color: transparent;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+
+  &:hover {
+    color: #fff;
+    border-color: $accent;
+    background-color: $accent;
+  }
+}
+
+
+
+.section-padding {
+  padding: 60px 0 120px;
+
+  @include media-max($md) {
+    padding: 50px 0 90px;
+  }
+
+  @include media-max($sm) {
+    padding: 40px 0 60px;
+  }
+
+  @include media-max($xs) {
+    padding: 30px 0 30px;
+  }
+}
+
+

@@ -1,0 +1,169 @@
+.login {
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include media-max($sm) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 30px;
+    }
+  }
+
+  &__form {
+    padding-left: 35px;
+
+    @include media-max($lg) {
+      padding-left: 20px;
+    }
+
+    @include media-max($sm) {
+      padding: 0;
+    }
+
+    &:first-child {
+      padding-right: 35px;
+      padding-left: 0;
+      border-right: 1px solid #e7e7e7;
+
+      @include media-max($lg) {
+        padding-right: 20px;
+      }
+
+      @include media-max($sm) {
+        padding: 0;
+        border-right: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: $greyText;
+    text-transform: uppercase;
+
+    @include media-max($sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1;
+    border: 1px solid #e7e7e7;
+    color: $darkText;
+    transition: border-color 0.3s;
+
+    @include media-max($sm) {
+      margin-bottom: 15px;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      color: $greyText;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: red;
+      background-color: rgba(#ff0000, 0.1);
+    }
+
+    &:hover {
+      border-color: $accent;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-max($lg) {
+      flex-direction: column;
+      align-items: flex-start
+    }
+  }
+
+  &__btn {
+    @include media-max($lg) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 225px;
+    transition: color 0.4s;
+    font-size: 13px;
+    font-weight: 600;
+
+    @include media-max($lg) {
+      justify-content: flex-start;
+    }
+
+    svg {
+      margin-left: 5px;
+      flex: 0 0 12px;
+      height: 12px;
+      color: $mainText;
+      transition: fill 0.4s;
+    }
+
+    &:hover {
+      color: $accent;
+
+      svg {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 12px;
+
+    &:hover {
+      color: $accent;
+      .login__checkbox {
+        border-color: $accent;
+      }
+    }
+  }
+
+  &__check {
+    &:checked + .login__checkbox {
+      border-color: $accent;
+      background-color: #e7e7e7;
+
+      svg {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    border: 1px solid #e7e7e7;
+    transition: background-color 0.4s, border-color 0.4s;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: transparent
+    }
+  }
+}

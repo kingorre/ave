@@ -1,0 +1,47 @@
+<section class="login section-padding">
+  <h2 class="sr-only">Login or Register</h2>
+  <div class="container">
+    <div class="login__body">
+      <form class="login__form sign__form" action="#">
+        <h3 class="login__title">sign in</h3>
+        <input class="login__input" type="email" name="name" placeholder="Your email..." required>
+        <input class="login__input" type="password" name="password" minlength="8" placeholder="Your password..." required>
+        <div class="login__box">
+          <button class="login__btn btn-main" type="submit">sign in</button>
+          <a class="login__link" href="#">
+            Forgot your password
+            <svg>
+              <use xlink:href="img/icons.svg#right-arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </form>
+
+      <form class="login__form sign__form" action="#">
+        <h3 class="login__title">Register</h3>
+        <input class="login__input" type="email" name="name" placeholder="Your email..." required>
+        <input class="login__input" type="password" name="password" placeholder="Your password..." required>
+        <input class="login__input" type="password" name="password" placeholder="Confirm password..." required>
+        <label class="login__label">
+          <input class="login__check sr-only" type="checkbox">
+          <span class="login__checkbox">
+            <svg>
+              <use xlink:href="img/icons.svg#check"></use>
+            </svg>
+          </span>
+          Sign up for exclusive updates, discounts, new arrivals, contests, and more!
+        </label>
+        <div class="login__box">
+          <button class="login__btn btn-main" type="submit">create account</button>
+          <a class="login__link" href="#">
+            By clicking ‘Create Account’, you
+            agree to our Privacy Policy
+            <svg>
+              <use xlink:href="img/icons.svg#right-arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

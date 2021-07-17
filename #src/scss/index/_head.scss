@@ -1,0 +1,60 @@
+.head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 46px);
+  background-color: #fff;
+  margin-top: 46px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 20% center;
+
+  @include media-max($sm) {
+    background-size: cover;
+    background-position: top;
+  }
+
+  @include media-max($xs) {
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
+  }
+
+  &__title {
+    color: 575153;
+    font-size: 450px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    align-self: center;
+    text-indent: 0.15em;
+
+    @include media-max($xl) {
+      font-size: 350px;
+    }
+
+    @include media-max($md) {
+      font-size: 250px;
+    }
+  
+    @include media-max($sm) {
+      font-size: 150px;
+    }
+  
+    @include media-max($xs) {
+      font-size: 100px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 13%;
+    right: 16%;
+
+    @include media-max($xs) {
+      right: 5%;
+    }
+  }
+}

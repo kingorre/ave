@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/style.min.css">
+		<title>AVE | The brand</title>
+	</head>
+	<body>
+
+    @@include('html/components/_header.html')
+    <div class="wrapper">
+      <main class="main">
+        @@include('html/components/_page-top.html', {
+          "title-first": "The",
+          "title-second": "brand",
+          "text": "company slogan goes here"
+        })
+        @@include('html/brand/_brand.html')
+      </main>
+      @@include('html/components/_footer.html')
+    </div>
+  
+    
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
